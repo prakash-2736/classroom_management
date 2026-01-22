@@ -13,15 +13,26 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+@layer components {
+  .page-title {
+    @apply text-3xl font-bold mb-4;
   }
-  body {
-    @apply bg-background text-foreground;
+  .search-input {
+    @apply w-full p-2 border border-border rounded-md bg-input text-foreground;
+  }
+  .actions-row {
+    @apply flex items-center gap-2 mt-3.5;
+  }
+  .search-field {
+    @apply relative w-full sm:w-80;
+  }
+  .search-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none;
+  }
+  .column-title {
+    @apply text-lg font-medium text-foreground;
   }
 }
-
 :root {
   --background: oklch(0.9779 0.0042 56.3756);
   --foreground: oklch(0.2178 0 0);
